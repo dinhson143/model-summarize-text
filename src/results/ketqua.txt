@@ -1,0 +1,100 @@
+=======22/6===
+File train precision score
+Rouge_1: 39.1871059724287
+Rouge_2: 15.53837470533371
+Rouge_L: 23.202215194943925 
+
+File train recall score
+Rouge_1: 67.80294712783841
+Rouge_2: 31.114051800002596
+Rouge_L: 45.6497486667876 
+
+File train fmeasure score
+Rouge_1: 50.13999177780205
+Rouge_2: 20.128460781112537
+Rouge_L: 29.88585934159882 
+
+===== rouge_score test ========
+File test precision score
+Rouge_1: 39.825783653242105
+Rouge_2: 15.678049038588037
+Rouge_L: 23.477775884734857 
+
+File test recall score
+Rouge_1: 66.94202038467513
+Rouge_2: 30.6626457170506
+Rouge_L: 45.098206556265026 
+
+File test fmeasure score
+Rouge_1: 50.57822509595782
+Rouge_2: 20.15927545759606
+Rouge_L: 30.00756153415129 
+
+
+
+
+===============23/05=======================
+File train precision score
+Rouge_1: 25.745901580424412
+Rouge_2: 12.437960014630242
+Rouge_L: 16.716940715722732 
+
+File train recall score
+Rouge_1: 85.95408596271545
+Rouge_2: 44.510741916432444
+Rouge_L: 58.08858160663307 
+
+File train fmeasure score
+Rouge_1: 38.37646131399713
+Rouge_2: 18.87745364424826
+Rouge_L: 25.178047689690636
+
+==============test===============
+File test precision score
+Rouge_1: 25.871156620681447
+Rouge_2: 12.461457363839676
+Rouge_L: 16.761077259774442
+
+File test recall score
+Rouge_1: 85.87882962524742
+Rouge_2: 44.41357155772393
+Rouge_L: 57.958761641057364
+
+File test fmeasure score
+Rouge_1: 38.4883158841513
+Rouge_2: 18.889792111647456
+Rouge_L: 25.203746034718012
+
+
+
+================26/5========================
+File train precision score
+Rouge_1: 27.626030998204676
+Rouge_2: 13.376535184553717
+Rouge_L: 17.75704600690412 
+
+File train recall score
+Rouge_1: 85.53688492149848
+Rouge_2: 43.53438820437466
+Rouge_L: 56.7465422601411 
+
+File train fmeasure score
+Rouge_1: 40.66881905135908
+Rouge_2: 19.943838776676653
+Rouge_L: 26.353466845417085 
+
+===========test====================
+File test precision score
+Rouge_1: 27.71568257739247
+Rouge_2: 13.345344868347109
+Rouge_L: 17.76224274199308
+
+File test recall score
+Rouge_1: 85.45037070899483
+Rouge_2: 43.3153047213826
+Rouge_L: 56.54242418574667
+
+File test fmeasure score
+Rouge_1: 40.7494921764324
+Rouge_2: 19.883561451217016
+Rouge_L: 26.331444418946255

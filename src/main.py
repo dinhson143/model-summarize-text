@@ -35,10 +35,8 @@ s3 = boto3.client(
 def reading_data_from_files() -> (pd.DataFrame, pd.DataFrame):
     print('1. Reading data from csv files......')
     try:
-        data_train_or = pd.read_csv(f'{ROOT_DATA}/data_train.csv', encoding="utf-8")
-        data_test_or = pd.read_csv(f'{ROOT_DATA}/test_data.csv', encoding="utf-8")
-        data_train = data_train_or.sample(n=2400, random_state=42)
-        data_test = data_test_or.sample(n=600, random_state=42)
+        data_train = pd.read_csv(f'{ROOT_DATA}/data_train.csv', encoding="utf-8")
+        data_test = pd.read_csv(f'{ROOT_DATA}/test_data.csv', encoding="utf-8")
         print('==> Reading data successfully......')
         return data_train, data_test
     except Exception as e:
@@ -57,7 +55,6 @@ def create_tokens_from_Sentences(data: pd.DataFrame) -> list:
     nltk.download('punkt')
     print('4. Sentences tokenization.....Create token')
 
-    index = []
     paras = []
     reg = "[^\\w\\s]"
 
@@ -100,9 +97,8 @@ def tfidf_weighted_vector(sentence, tfidf_vectorizer, fasttext):
     return vector
 
 
-def process_paragraph(index, para, tfidf_vectorizer, fasttext):
+def process_paragraph(para, tfidf_vectorizer, fasttext):
     sentence_vectors = []
-    print(f"Processing paragraph {index}")
     for sentence in para:
         words = sentence.split(" ")
         sentence_vector = tfidf_weighted_vector(sentence, tfidf_vectorizer, fasttext)
@@ -127,9 +123,8 @@ def convert_sentence_to_vector(paras: list) -> list:
     #     sentence_vectors = process_paragraph(para, tfidf_vectorizer, fasttext)
     #     paras_encode.append(sentence_vectors)
     #     break
-    index = 0
     paras_encode = Parallel(n_jobs=-1, backend="multiprocessing")(
-        delayed(process_paragraph)(index, para, tfidf_vectorizer, fasttext) for para in tqdm(paras, desc="Processing sentences", leave=False)
+        delayed(process_paragraph)(para, tfidf_vectorizer, fasttext) for para in tqdm(paras, desc="Processing sentences", leave=False)
     )
 
     print('==> Sentences => Embedding.....Convert sentences to vector successfully\n')

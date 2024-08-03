@@ -9,7 +9,6 @@ from tqdm import tqdm
 from pyvi import ViTokenizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import pairwise_distances_argmin_min
-from joblib import Parallel, delayed
 
 ROOT = "./src/results"
 ROOT_DATA = "./data"
