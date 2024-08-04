@@ -17,8 +17,8 @@ from sklearn.metrics import pairwise_distances_argmin_min
 from rouge_score import rouge_scorer
 from joblib import Parallel, delayed
 
-ROOT = "./src/results"
-ROOT_DATA = "./src/data"
+ROOT = "./results"
+ROOT_DATA = "./data"
 CURRENT_DATE = datetime.today().date()
 BUCKET_NAME = "training-model-summarize-text"
 kmeans_file_key = f'kmeans_{CURRENT_DATE}.pkl'
