@@ -10,7 +10,7 @@ from pyvi import ViTokenizer
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics import pairwise_distances_argmin_min
 
-ROOT = "./src/results"
+ROOT = "./results"
 ROOT_DATA = "./data"
 
 
