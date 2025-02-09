@@ -13,8 +13,8 @@ labels_file_key = f'label_{CURRENT_DATE}.pkl'
 results_file_key = f'result_train_test_{CURRENT_DATE}_sentoken.txt'
 s3 = boto3.client(
     's3',
-    aws_access_key_id='AKIAYMDNZKZVFYRTRERO',
-    aws_secret_access_key='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',
+    aws_access_key_id='xxx',
+    aws_secret_access_key='xxx',
     region_name='ap-southeast-1'
 )
 

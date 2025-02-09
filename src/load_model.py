@@ -49,8 +49,6 @@ def tokenize_text(text):
 
 
 def convert_sentence_to_vector(paras: list) -> list:
-    print('5.Sentences => Embedding.....Convert sentences to vector')
-
     fasttext = KeyedVectors.load_word2vec_format(f'{ROOT_DATA}/cc.vi.300.vec')
     vocab = fasttext.key_to_index  # Danh sách các từ trong từ điển
 
@@ -78,7 +76,7 @@ if __name__ == '__main__':
 
     # load data
     print('1. Reading data need to be predicted......')
-    data_du_bao = pd.read_csv(f'{ROOT_DATA}/dubao.csv')
+    data_du_bao = pd.read_csv(f'{ROOT_DATA}/datamau2.csv')
     print('==> Reading data need to be predicted successfully......')
 
     print('2. Shape train and test data ......')
